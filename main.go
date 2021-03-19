@@ -32,7 +32,7 @@ func PascalsToMillibar(pa float64) float64 {
 	return pa / 100.0
 }
 
-// PascalsToMillibar converts the given pressure, in pascals, to inches of mercury.
+// PascalsToInHg converts the given pressure, in pascals, to inches of mercury.
 func PascalsToInHg(pa float64) float64 {
 	return pa * 0.0002953
 }
@@ -145,7 +145,7 @@ func main() {
 			}
 
 			point := influxdb2.NewPoint(
-				"temperature_humidity",
+				"pi_wx",
 				map[string]string{"sensor_name": *sensorName}, // tags
 				map[string]interface{}{
 					"temperature_f":                   tempF,
